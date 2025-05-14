@@ -13,10 +13,12 @@ import androidx.compose.ui.Modifier
 import androidx.navigation.compose.*
 import java.util.Locale
 import com.grind.lockin.ui.screen.*
+import com.grind.lockin.utils.AppGlobals
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        AppGlobals.init(applicationContext)
         enableEdgeToEdge()
         setContent {
             LockInApp()

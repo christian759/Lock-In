@@ -7,8 +7,6 @@ import androidx.room.PrimaryKey
 data class AppUsage(
     @PrimaryKey(autoGenerate = true) val id: Int = 0,
     val packageName: String,
-    val appName: String,
-    val startTime: Long,
-    val endTime: Long,
-    val duration: Long
+    val usageTime: Long, // in milliseconds
+    val date: Long       // epoch day
 )
